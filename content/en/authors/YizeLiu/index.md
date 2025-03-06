@@ -68,4 +68,4 @@ user_groups:
   - Lab Administrator
 ---
 
-Yize Liu is.....
+I am focusing on the thermal physiology of Calotes versicolor in cloudy and rainy days. Passionate about lizard physiological ecology.
