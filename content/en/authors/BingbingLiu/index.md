@@ -68,4 +68,4 @@ user_groups:
   - Undergraduate Student
 ---
 
-My current research uses the mechanistic niche model to explore the effects of climate change on the thermal regulation behavior and activity time of Gloydius shedaoensis, so as to explore whether climate change will lead to mismatch between Gloydius shedaoensis and its food resources.
+My current research uses the mechanistic niche model to explore the effects of climate change on the thermal regulation behavior and activity time of Gloydius shedaoensis, so as to explore whether climate change will lead to mismatch between *Gloydius shedaoensis* and its food resources.
