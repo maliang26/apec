@@ -8,7 +8,7 @@
     {{ $show_organizations := $block.design.show_organizations | default false }}
     {{ $show_role := $block.design.show_role | default true }}
 
-<div class="universal-wrapper">
+<div class="universal-wrapper people-list-wrap">
   <div class="row ">
       {{ with $block.content.title }}
         <div class="section-heading col-12 mb-3 text-center">
@@ -35,7 +35,7 @@
 
           {{if $query | and (gt (len $block.content.user_groups) 1) }}
             <div class="col-md-12">
-              <h2 class="mb-4">{{ . | markdownify }}</h2>
+              <h2 class=" person-group-name">{{ . | markdownify }}</h2>
             </div>
           {{end}}
 
@@ -64,9 +64,9 @@
 
                 <div class="portrait-title person-desc">
                     {{/*<h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>*/}}
-                  <h2>{{ .Title }}</h2>
+                  <h4>{{ .Title }}</h4>
                     {{/*{{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}*/}}
-                    {{ if and $show_role .Params.role }}<h3>{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
+                    {{ if and $show_role .Params.role }}<h3 class="role-desc">{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
                     {{/*{{ if $show_social }}{{ partial "social_links" . }}{{ end }}*/}}
                     {{ if .Content }}<p class="people-interests">{{ .Content | markdownify | emojify }}</p>{{ end }}
                 </div>
