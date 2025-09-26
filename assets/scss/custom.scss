@@ -154,16 +154,9 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
   margin: 0 0 2rem 0;
 
   display: flex;
-  .person-img {
-    img {
-      max-width: 270px;
-      height: auto;
-    }
-    padding: 1rem;
 
-  }
   .person-desc {
-    flex: 1;
+    //flex: 1;
     padding-left: 1rem;
   }
   .avatar {
@@ -173,7 +166,7 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
     border-left: 1px solid lightgray;
     padding-left: 1rem;
   }
-  
+
   .people-email {
     margin: 0.5rem 0 !important;
     display: flex !important;
@@ -181,14 +174,14 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
     clear: both;
     position: relative;
     z-index: 1;
-    
+
     a {
       display: flex !important;
       align-items: center !important;
       text-decoration: none;
       color: #666;
       white-space: nowrap;
-      
+
       i {
         margin-right: 0.5rem;
         font-size: 0.9rem;
@@ -197,6 +190,28 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
         text-align: center;
       }
     }
+  }
+
+  .p-social-links {
+    margin: 1rem auto 0 auto;
+    width: 270px;
+    text-align: center;
+    .social-link-item {
+      margin-right: 1rem !important;
+    }
+  }
+
+  .person-img {
+    img {
+      max-width: 270px;
+      height: auto;
+    }
+    padding: 1rem;
+
+    .p-social-links {
+      width: unset;
+    }
+
   }
 
 }

@@ -54,20 +54,28 @@
                     {{ $avatar_image := $avatar.Fill "270x270 Center" }}
                     {{ $src = $avatar_image.RelPermalink }}
                 {{ end }}
+
+
                 {{ if $src }}
                     {{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
                     {{/*{{with $link}}<a href="{{.}}">{{end}}<img width="270" height="270" loading="lazy" class="avatar {{if eq $avatar_shape "square"}}avatar-square{{else}}avatar-circle{{end}}" src="{{ $src }}" alt="Avatar">{{if $link}}</a>{{end}}*/}}
                   <div class="person-img ">
                     <img width="270" height="270" loading="lazy" class="avatar avatar-square " src="{{ $src }}" alt="Avatar" />
+                      {{ if $show_social }}
+                      <div class="p-social-links">
+                          {{ partial "people_social_links" . }}
+                      </div>
+                      {{ end }}
                   </div>
                 {{ end }}
+
 
                 <div class="portrait-title person-desc">
                     {{/*<h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>*/}}
                   <h4>{{ .Title }}</h4>
                     {{/*{{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}*/}}
                     {{ if and $show_role .Params.role }}<h3 class="role-desc">{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
-                    {{/*{{ if $show_social }}{{ partial "social_links" . }}{{ end }}*/}}
+                    {{ if and (not $src) $show_social }}<div class="p-social-links">{{ partial "people_social_links" . }}</div>{{ end }}
                     {{ if .Content }}<p class="people-interests">{{ .Content | markdownify | emojify }}</p>{{ end }}
                 </div>
             </div>
