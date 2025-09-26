@@ -47,16 +47,14 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:fanjq5@mail2.sysu.com'
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: 'mailto:fanjq5@mail2.sysu.edu.cn'
+
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://github.com/JUNQI-FAN
+    
+    
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -68,7 +66,6 @@ email: ''
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-
 ---
 
 <!-- After earning my Bachelor's in Ecology from Sun Yat-Sen University in 2025, I chose to continue my PhD study there. My work is at the intersection of ecological modeling and biodiversity conservation. I apply a range of tools—from physiological and statistical models to geospatial analysis—to tackle sustainability challenges in the human-nature system. My current research focuses on several areas: projecting climate-driven human-wildlife conflicts in China, investigating the phenological mismatch of a protected viper species, and evaluating the effectiveness of protected areas in preserving the gibbon's physiological niche.
