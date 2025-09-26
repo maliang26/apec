@@ -76,4 +76,3 @@ email: ''
 
 ---
 
-Yuanjie Li is....

@@ -11,8 +11,7 @@ authors:
   ZihanZhou
 
 # Role/position
-role: PhD student
-
+role:
 # Organizations/Affiliations
 organizations:
   - name: Sun Yat-sen University
@@ -73,4 +72,5 @@ email: ''
 
 ---
 
-Zihan Zhou is......
+My research currently focus on the impacts of climate change on desert lizards. My broader research interests lie in climate change ecology and wildlife conservation, with a particular passion for translating abstract research into practical conservation strategies. Through my work, I aim to better understand species’ vulnerabilities to changing environments and contribute to the protection of biodiversity in fragile ecosystems. Outside of academia, I enjoy dancing hip-hop, listening to R&B music, and immersing myself in mystery novels and films, which inspire both creativity and critical thinking.                  
+I completed my undergraduate studies at the College of Resources and Environmental Sciences, China Agricultural University in Beijing. After joining the APEC Lab as a master’s student, I transitioned into the PhD program, where I continue to pursue my research.

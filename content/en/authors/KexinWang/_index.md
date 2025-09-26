@@ -11,7 +11,7 @@ authors:
   Kexin Wang
 
 # Role/position
-role: Master student
+role:
 
 # Organizations/Affiliations
 organizations:
@@ -72,5 +72,5 @@ email: ''
 
 ---
 
-Kexin Wang is
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I am a master student in the APEC research group, where my interest lies in the physiological mechanisms underlying road mortality in snakes. My research investigates whether roads function as thermal traps by comparing effective temperatures of road surfaces with those of adjacent habitats, and by examining how these temperatures relate to the preferred body temperatures of snakes. Through this approach, I aim to evaluate whether thermoregulatory behavior drives snakes onto roads, thereby increasing their susceptibility to roadkill. This research not only advances our understanding of the links between animal physiology and conservation, but also seeks to inform conservation strategies that mitigate the impact of road networks on biodiversity.
+I earned my Bachelor’s degree in Marine Resources and Environment from Ocean University of China, where I developed a strong background in ecological principles and field-based research. These experiences provided both the conceptual and practical foundation for my current work.

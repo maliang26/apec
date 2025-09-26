@@ -10,7 +10,7 @@ authors:
   -  YizeLiu
   
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position
 role: Research Assistant
@@ -65,7 +65,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Lab Administrator
+  - Alumni
 ---
-
-I am focusing on the thermal physiology of Calotes versicolor in cloudy and rainy days. Passionate about lizard physiological ecology.
+<!-- 
+I am focusing on the thermal physiology of Calotes versicolor in cloudy and rainy days. Passionate about lizard physiological ecology. -->

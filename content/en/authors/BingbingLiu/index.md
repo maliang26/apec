@@ -24,9 +24,6 @@ organizations:
 bio: My research interests include .....
 
 interests:
-  - Species Distribution Model
-  - Conservation Biology
-  - Social Science
 
 education:
   courses:
@@ -66,7 +63,9 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Undergraduate Student
+  - Alumni
+
+show_photo: false
 ---
 
-My current research uses the mechanistic niche model to explore the effects of climate change on the thermal regulation behavior and activity time of Gloydius shedaoensis, so as to explore whether climate change will lead to mismatch between *Gloydius shedaoensis* and its food resources.
+<!-- My current research uses the mechanistic niche model to explore the effects of climate change on the thermal regulation behavior and activity time of *Gloydius shedaoensis*, so as to explore whether climate change will lead to mismatch between *Gloydius shedaoensis* and its food resources. -->

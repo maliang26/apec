@@ -12,7 +12,7 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
 
 
 .user-icon-avatar {
-  width: 150px;
+  width: 1505px;
   height: 150px;
   display: flex;
   align-items: center;
@@ -31,10 +31,10 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .hero-lead {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -172,6 +172,31 @@ $navbar-theme-top-line-primary:  #8dc015; //导航栏顶部横线颜色
   .role-desc {
     border-left: 1px solid lightgray;
     padding-left: 1rem;
+  }
+  
+  .people-email {
+    margin: 0.5rem 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    clear: both;
+    position: relative;
+    z-index: 1;
+    
+    a {
+      display: flex !important;
+      align-items: center !important;
+      text-decoration: none;
+      color: #666;
+      white-space: nowrap;
+      
+      i {
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        width: 1rem;
+        text-align: center;
+      }
+    }
   }
 
 }

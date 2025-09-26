@@ -11,7 +11,7 @@ authors:
   NiyaWang
 
 # Role/position
-role: Master student
+role: Master Student
 
 # Organizations/Affiliations
 organizations:
@@ -19,7 +19,7 @@ organizations:
     url: '/'
 
 user_groups:
-  - Master Student
+  - Alumni
 
 
 # Is this the primary user of the site?
@@ -71,6 +71,3 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 
 ---
-
-Niya Wang is
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.

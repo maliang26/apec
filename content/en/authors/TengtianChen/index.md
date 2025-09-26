@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Undergraduate Student
+role:
 
 # Organizations/Affiliations
 organizations:
@@ -72,4 +72,4 @@ user_groups:
   - Undergraduate Student
 ---
 
-Tengtian Chen is.....
+My research interest mainly lies in exploring the application of new methods in thermal physiology. Currently, I am conducting research on developing robots to simulate the behavioral thermoregulation of reptiles, using robots to investigate some reptile thermoregulation issues (such as cost estimation of lizard thermoregulation, thermal physiological mechanisms of snake roadkill, etc.). I have been involved in work on measuring the reflectance of bird feathers and researching the thermal physiological mechanisms of snake roadkill.

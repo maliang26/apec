@@ -15,11 +15,11 @@ type: home_index
 heroBlock:
   block: hero
   content:
-    title: The Animal Physiological Ecology and Conservation Lab
+    title:
 #    image:
 #      filename: research_topic.jpg
     text: |
-      The APEC Lab at Sun Yat-sen University focuses on the physiological ecology and conservation of terrestrial animals, especially reptiles and birds. Our research integrates field and controlled experiments with mechanistic and statistical models to explore how animals interact with their environment. By studying physiological responses and ecological dynamics, we assess species’ adaptability and vulnerability to environmental change. Our work aims to enhance biodiversity conservation by bridging experimental research with predictive modeling.
+      The APEC (Animal Physiological Ecology and Conservation) Lab at Sun Yat-sen University focuses on the physiological ecology and conservation of terrestrial animals, especially reptiles and birds. Our research integrates field and controlled experiments with mechanistic and statistical models to explore how animals interact with their environment. By studying physiological responses and ecological dynamics, we assess species’ adaptability and vulnerability to environmental change. Our work aims to enhance biodiversity conservation by bridging experimental research with predictive modeling.
 
   
 heroSlideBlock:
@@ -31,24 +31,24 @@ heroSlideBlock:
       align: center
       background:
         image:
-          filename: group_slides/group_photo1.jpg
+          filename: group_slides/group_members_202509.jpg
           filters:
-            brightness: 1
+            brightness: 1.1
         position: right
         color: '#666'  
-    - title: 
-      content: 
-      align: left
-      background:
-        image:
-          filename: group_slides/group_photo2.jpg
-          filters:
-            brightness: 1
-        position: right
-        color: '#666'  
+    # - title: 
+    #   content: 
+    #   align: left
+    #   background:
+    #     image:
+    #       filename: group_slides/group_photo2.jpg
+    #       filters:
+    #         brightness: 1
+    #     position: right
+    #     color: '#666'  
   design:
     # Slide height is automatic unless you force a specific height (e.g. '400px')
-    slide_height: '320px'
+    slide_height: '400px'
     is_fullscreen: false
     # Automatically transition through slides?
     loop: false
@@ -78,7 +78,7 @@ newsBlock:
 publicationsBlock:
   block: collection
   content:
-    title: Latest Publications
+    title: Publications
     count: 5
     filters:
       folders:
