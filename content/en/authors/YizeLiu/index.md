@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Assistant
+# role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
@@ -58,3 +58,4 @@ user_groups:
 ---
 <!-- 
 I am focusing on the thermal physiology of Calotes versicolor in cloudy and rainy days. Passionate about lizard physiological ecology. -->
+Yize was an undergraduate student at Sun Yat-sen University (Class of 2020) and, under the supervision of Liang Ma and Yue Wang, studied the feeding requirements of mammoths and their responses to past climate change using mechanistic niche models. After graduation, she also worked as a research assistant in the APEC group for one year. She is now a graduate student at Chengdu Institute of Biology, Chinese Academy of Sciences.

@@ -64,4 +64,6 @@ user_groups:
   - Postdoctoral Research Associate
 ---
 
-Zhen Pu is.....
+My research focuses on the ecology and conservation of migratory birds, with a particular emphasis on how climate change affects stopover migrants in global warm desert biomes. By combining experimental research with mechanistic modeling, I aim to assess the impacts of climate change on migratory birds in the world’s warm deserts and to develop targeted conservation strategies.
+Prior to joining APEC, I received my B.S. (2016), MSc (2019), and PhD (2024) from Beijing Forestry University. My doctoral research examined the migration strategies of the Black-necked Crane, the only alpine crane species endemic to the Qinghai-Tibetan and Yunnan-Guizhou plateaus. I am also interested in how ecological barriers—such as mountains and warm deserts—shape migration patterns of migratory birds.
+

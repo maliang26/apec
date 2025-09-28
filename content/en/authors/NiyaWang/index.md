@@ -11,7 +11,7 @@ authors:
   NiyaWang
 
 # Role/position
-role: Master Student
+#role: Master Student
 
 # Organizations/Affiliations
 organizations:
@@ -60,3 +60,4 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 
 ---
+Niya was a Master student in the Class of 2022 and the APEC group’s first graduate. She collaborated with Zhongwen Jiang on the impacts of climate change on oviparous reptile embryos, with their study published in *Conservation Biology* (Jiang, Wang et al. 2025 *Conservation Biology*).

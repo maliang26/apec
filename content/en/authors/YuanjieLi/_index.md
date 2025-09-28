@@ -11,7 +11,7 @@ authors:
   YuanjieLi
 
 # Role/position
-role: Research Assistant 2023
+#role: Research Assistant 2023
 
 # Organizations/Affiliations
 organizations:
@@ -64,4 +64,4 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 
 ---
-
+Yuanjie visited the APEC lab in 2023 for a collaboration with Liang Ma and Wenda Cheng, conducting research on how cropland microclimates influence pests and their natural enemies. She is now a postdoctoral researcher at Free University of Bozen in Italy.

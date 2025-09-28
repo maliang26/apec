@@ -13,7 +13,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Undergraduate Student
+#role: Undergraduate Student
 
 # Organizations/Affiliations
 organizations:
@@ -58,3 +58,4 @@ show_photo: false
 ---
 
 <!-- My current research uses the mechanistic niche model to explore the effects of climate change on the thermal regulation behavior and activity time of *Gloydius shedaoensis*, so as to explore whether climate change will lead to mismatch between *Gloydius shedaoensis* and its food resources. -->
+Bingbing was an undergraduate student at Sun Yat-sen University (Class of 2021), conducted research under Liang Ma’s supervision in collaboration with Junqi Fan on phenological mismatches between the Shedao pit viper and migratory passerines.

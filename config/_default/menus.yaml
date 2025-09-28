@@ -24,7 +24,7 @@ main:
 
   - name: People
     url: people
-    weight: 30
+    weight: 50
 
   - name: Publication
     url: publication
@@ -33,4 +33,4 @@ main:
 
   - name: News
     url: post
-    weight: 70
+    weight: 50
