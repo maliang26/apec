@@ -13,9 +13,9 @@
 
       {{/* 0 不要连接了 ONLY Peng Miao IS AVAILABLE TO LINK TO DETAIL PAGE */}}
       {{- if and 0 .RelPermalink  (eq .LinkTitle "Peng Miao") -}}
-        <a href="{{.RelPermalink}}">{{.LinkTitle}}</a>
+        <a href="{{.RelPermalink}}">{{.LinkTitle | markdownify}}</a>
       {{- else -}}
-        {{ .LinkTitle }}
+        {{ .LinkTitle | markdownify }}
       {{- end -}}
     </span>
     {{- if isset $.Params "author_notes" -}}

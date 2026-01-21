@@ -7,7 +7,7 @@ title: Collective effects of rising average temperatures and heat events on ovip
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- Liang Ma
+- "**Liang Ma**"
 - Dan-Yang Wu
 - Yang Wang
 - Joshua M Hall
@@ -17,7 +17,10 @@ authors:
 - Chao Hou
 - Kun-Ming Cheng
 - Yong-Pu Zhang
-- ' others'
+- Ji-Chao Wang
+- Hong-Liang Lu
+- Wei-Guo Du
+- Bao-Jun Sun
 
 # Author notes (such as 'Equal Contribution')
 # A YAML list of notes for each author in the above `authors` list

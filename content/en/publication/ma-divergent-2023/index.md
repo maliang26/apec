@@ -7,9 +7,9 @@ title: Divergent effects of climate change on the egg-laying opportunity of spec
 # If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
-- Liang Ma
+- "**Liang Ma**"
 - Chao Hou
-- Zhong-Wen Jiang
+- "**Zhong-Wen Jiang**"
 - Wei-Guo Du
 
 # Author notes (such as 'Equal Contribution')

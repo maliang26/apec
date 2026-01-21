@@ -10,7 +10,7 @@ authors:
 - Lotanna M Nneji
 - Josué AR Azevedo
 - Oyetola O Oyebanji
-- Liang Ma
+- "**Liang Ma**"
 - Paul R Elsen
 - Segun O Oladipo
 - Gabriel Salako

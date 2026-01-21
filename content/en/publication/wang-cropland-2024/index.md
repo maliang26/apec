@@ -10,7 +10,7 @@ authors:
 - Ling Wang
 - Shuang Xing
 - Xinyue Chang
-- Liang Ma
+- "**Liang Ma**"
 - Cheng Wenda
 
 # Author notes (such as 'Equal Contribution')

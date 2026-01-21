@@ -8,7 +8,7 @@ title: Global protected areas as refuges for amphibians and reptiles under clima
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Chunrong Mi
-- Liang Ma
+- "**Liang Ma**"
 - Mengyuan Yang
 - Xinhai Li
 - Shai Meiri

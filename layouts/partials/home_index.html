@@ -1,41 +1,80 @@
-
-
 <section id="section-banner-video" class="home-video-section">
 
   <div class="home-video-wrapper">
+      <div class="overlay-navbar">
+          {{ partial "components/headers/navbar.html" . }}
+      </div>
+      
       <video muted="" id="videoSource" src=""  class="banner-video1" autoplay="" loop=""></video>
+
+      <!-- Video Controls -->
+      <div class="video-controls">
+        <button id="prevVideoBtn" class="video-control-btn left" aria-label="Previous Video">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="nextVideoBtn" class="video-control-btn right" aria-label="Next Video">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      {{/*
       <div class="video-title-position">
         <div class="video-title-wrap">
           <div class="video-title1">{{ site.Title }}</div>
           <div class="video-subtitle1"> Animal Physiological Ecology and Conservation</div>
         </div>
-
       </div>
+      */}}
   </div>
     <div>
-        {{ partial "components/headers/navbar.html" . }}
+        
     </div>
 
 </section>
 
 <script type="text/javascript">
-  function randomPlay() {
+  document.addEventListener('DOMContentLoaded', function() {
     const videos = [
       '{{ "video/BlackHornbill.mp4" | relLangURL }}',
       '{{ "video/Flylizard.mp4" | relLangURL }}',
       '{{ "video/Pitta.mp4" | relLangURL }}',
-      // 添加更多视频文件路径
     ];
-    const randomIndex = Math.floor(Math.random() * videos.length);
+    
+    // Start with a random video
+    let currentIndex = Math.floor(Math.random() * videos.length);
     const videoElement = document.getElementById('videoSource');
-    videoElement.src = videos[randomIndex]
-    videoElement.load(); // 重新加载视频以应用新的源
-    videoElement.play(); // 自动播放视频
-    // console.log(videoElement.src, '=====')
-  }
 
-  setTimeout(randomPlay)
-  // randomPlay();
+    function loadAndPlay(index) {
+      if (index < 0) index = videos.length - 1;
+      if (index >= videos.length) index = 0;
+      
+      currentIndex = index;
+      videoElement.src = videos[currentIndex];
+      videoElement.load();
+      
+      // Ensure the video plays
+      const playPromise = videoElement.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log("Auto-play was prevented. Interaction required.");
+        });
+      }
+    }
+
+    // Initial load
+    loadAndPlay(currentIndex);
+
+    // Button Event Listeners
+    document.getElementById('prevVideoBtn').addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent any default action
+      loadAndPlay(currentIndex - 1);
+    });
+
+    document.getElementById('nextVideoBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      loadAndPlay(currentIndex + 1);
+    });
+  });
 </script>
 
 
@@ -47,16 +86,29 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 {{ $heroBlock := .Params.heroBlock }}
 {{ $slider_hash_id := "hero_sliders" }}
 {{ $slider_args := dict "wcPage" $ "wcBlock" .Params.heroSlideBlock "wcIdentifier" $slider_hash_id }}
-<section id="section-hero" class="home-section wg-hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 text-center text-md-left">
+<section id="section-hero" class="home-section wg-hero" style="padding: 20px 0;">
+  <div class="container-fluid px-4 px-md-5"> <!-- Wide width with healthy margins -->
+    <div class="row justify-content-center">
+      <!-- Row 1: Introduction Text -->
+      <div class="col-12 text-center mb-4" style="text-align: left !important;">
+        <h2 class="text-left" style="
+          font-family: Georgia, serif; 
+          font-weight: 900; 
+          font-size: 3.5rem; 
+          color: #000; 
+          margin-bottom: 2rem; 
+          padding-bottom: 1rem; 
+          border-bottom: 4px solid #1565c0; 
+          display: inline-block;
+          text-align: left;
+        ">Welcome to the APEC lab!</h2>
         <h1 class="hero-title" >{{ $heroBlock.content.title }}</h1>
-        <div class="hero-lead" >
+        <div class="hero-lead" style="max-width: 100%; width: 100%; text-align: left;"> <!-- Align lead text left too? User didn't specify, but looks better with left header. I'll keep it justified or left. -->
             {{ $heroBlock.content.text | markdownify }}
         </div>
       </div>
-      <div class="col-12 col-md-6 hero-media carousel slide "
+      <!-- Row 2: Photo Slider -->
+      <div class="col-12 col-lg-8 mx-auto hero-media carousel slide"
            id="{{ $slider_hash_id }}">
           {{ partial "blocks/slider.html" $slider_args }}
       </div>

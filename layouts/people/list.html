@@ -1,90 +1,132 @@
 {{- define "main" -}}
 
-
     {{/* Initialise */}}
     {{ $block := index .Params.sections 0 }}
     {{ $show_social := $block.design.show_social | default false }}
-    {{ $show_interests := $block.design.show_interests | default true }}
-    {{ $show_organizations := $block.design.show_organizations | default false }}
     {{ $show_role := $block.design.show_role | default true }}
 
-<div class="universal-wrapper people-list-wrap">
-  <div class="row ">
-      {{ with $block.content.title }}
-        <div class="section-heading col-12 mb-3 text-center">
-          <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
-            {{ with $block.content.subtitle }}<p class="mt-1">{{ . | markdownify | emojify }}</p>{{ end }}
-        </div>
-      {{ end }}
+<div class="people-widget-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px;">
+  
+  {{/* MAIN PAGE HEADING: "People" */}}
+  {{ with $block.content.title }}
+    <div class="section-heading mb-5 text-left">
+      <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
+        {{ with $block.content.subtitle }}<p class="mt-2">{{ . | markdownify | emojify }}</p>{{ end }}
+    </div>
+  {{ end }}
 
-      {{ with $block.content.text }}
-        <div class="col-md-12">
-            {{ . | safeHTML }}
-        </div>
-      {{ end }}
+  {{ with $block.content.text }}
+    <div class="mb-5">
+        {{ . | safeHTML }}
+    </div>
+  {{ end }}
 
-      {{ range $block.content.user_groups }}
-          {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
+  {{ range $block.content.user_groups }}
+      {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
+      {{ $sort_by := $block.content.sort_by | default "Params.last_name" }}
+      {{ $sort_by = partial "blox-core/functions/get_sort_by_parameter" $sort_by }}
+      {{ $sort_ascending := $block.content.sort_ascending | default true }}
+      {{ $sort_order := cond $sort_ascending "asc" "desc" }}
+      {{ $query = sort $query $sort_by $sort_order }}
 
-          {{/* Sort */}}
-          {{ $sort_by := $block.content.sort_by | default "Params.last_name" }}
-          {{ $sort_by = partial "blox-core/functions/get_sort_by_parameter" $sort_by }}
-          {{ $sort_ascending := $block.content.sort_ascending | default true }}
-          {{ $sort_order := cond $sort_ascending "asc" "desc" }}
-          {{ $query = sort $query $sort_by $sort_order }}
+      {{if $query }}
+        <div class="people-group-wrapper mt-5 mb-4">
+          <h2 class="person-group-name" style="
+            font-family: Georgia, serif; 
+            font-weight: bold; 
+            font-size: 1.8rem; 
+            color: #000; 
+            margin-bottom: 2rem; 
+            padding-bottom: 0; 
+            border-bottom: none; 
+            display: block;
+          ">{{ . | markdownify }}</h2>
 
-          {{if $query | and (gt (len $block.content.user_groups) 1) }}
-            <div class="col-md-12">
-              <h2 class=" person-group-name">{{ . | markdownify }}</h2>
-            </div>
-          {{end}}
-
-          {{ range $query }}
-              {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
-              {{/* Get link to user's profile page. */}}
-              {{ $link := "" }}
-              {{ with site.GetPage (printf "/authors/%s" (path.Base .File.Dir)) }}
-                  {{ $link = .RelPermalink }}
-              {{ end }}
-            <div class="people-persons-list-row people-person  ">
+          <div class="people-list">
+            {{ range $query }}
+                {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
                 {{ $src := "" }}
                 {{ if site.Params.features.avatar.gravatar }}
                     {{ $src = printf "https://s.gravatar.com/avatar/%s?s=150" (md5 .Params.email) }}
                 {{ else if $avatar }}
-                    {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+                    {{ $avatar_image := $avatar.Fill "400x500 Center" }}
                     {{ $src = $avatar_image.RelPermalink }}
                 {{ end }}
 
-
-                {{ if $src }}
-                    {{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
-                    {{/*{{with $link}}<a href="{{.}}">{{end}}<img width="270" height="270" loading="lazy" class="avatar {{if eq $avatar_shape "square"}}avatar-square{{else}}avatar-circle{{end}}" src="{{ $src }}" alt="Avatar">{{if $link}}</a>{{end}}*/}}
-                  <div class="person-img ">
-                    <img width="270" height="270" loading="lazy" class="avatar avatar-square " src="{{ $src }}" alt="Avatar" />
-                      {{ if $show_social }}
-                      <div class="p-social-links">
-                          {{ partial "people_social_links" . }}
+                <div class="person-row-item mb-4">
+                  <div class="people-card" style="
+                    background: #fff; 
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+                    border-radius: 8px; 
+                    padding: 1.5rem; 
+                    transition: all 0.3s ease;
+                    border: 1px solid #f0f0f0;
+                  ">
+                    <div class="row align-items-start no-gutters">
+                      
+                      {{ if $src }}
+                      <div class="col-auto mr-4 mt-3 text-center"> <!-- Center for icons below -->
+                        <img src="{{ $src }}" alt="{{ .Title }}" style="
+                          width: 180px; 
+                          height: 225px; 
+                          object-fit: cover; 
+                          border-radius: 4px; 
+                          border: 1px solid #eee;
+                          display: block;
+                          margin-bottom: 0.8rem;
+                        ">
+                        {{ if $show_social }}
+                        <div class="p-social-links d-flex justify-content-center" style="gap: 12px;">
+                            {{ partial "people_social_links" . }}
+                        </div>
+                        {{ end }}
                       </div>
                       {{ end }}
+
+                      <div class="col">
+                        
+                        <!-- Header: Name only -->
+                        <div class="d-flex align-items-start mb-1">
+                            <h3 style="font-family: Georgia, serif; font-weight: bold; font-size: 1.7rem; margin-bottom: 0; color: #000; line-height: 1.2;">
+                              <a href="{{ .RelPermalink }}" style="color: #000; text-decoration: none;">{{ .Title }}</a>
+                            </h3>
+                        </div>
+
+                        {{ if and $show_role .Params.role }}
+                          <div style="font-family: Georgia, serif; font-size: 1.1rem; color: #1565c0; font-weight: 500; margin-bottom: 0.8rem;">{{ .Params.role | markdownify | emojify }}</div>
+                        {{ end }}
+
+                        {{ if .Content }}
+                          <div class="people-summary" style="font-family: Georgia, serif; font-size: 1.05rem; color: #555; line-height: 1.5; margin-top: 0.5rem;">
+                            {{ .Content | markdownify | emojify }}
+                          </div>
+                        {{ end }}
+                      </div>
+
+                    </div>
                   </div>
-                {{ end }}
-
-
-                <div class="portrait-title person-desc">
-                    {{/*<h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>*/}}
-                  <h4>{{ .Title }}</h4>
-                    {{/*{{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}*/}}
-                    {{ if and $show_role .Params.role }}<h3 class="role-desc">{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
-                    {{ if and (not $src) $show_social }}<div class="p-social-links">{{ partial "people_social_links" . }}</div>{{ end }}
-                    {{ if .Content }}<p class="people-interests">{{ .Content | markdownify | emojify }}</p>{{ end }}
                 </div>
-            </div>
-          {{ end }}
-      {{ end }}
-  </div>
+            {{ end }}
+          </div>
+        </div>
+      {{end}}
+  {{ end }}
 </div>
 
-
-
+<style>
+  .people-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 25px rgba(21, 101, 192, 0.15) !important;
+    border-color: #1565c0 !important;
+  }
+  .p-social-links a {
+    color: #666 !important;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  .p-social-links a:hover {
+    color: #1565c0 !important;
+  }
+</style>
 
 {{- end -}}

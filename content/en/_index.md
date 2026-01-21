@@ -19,7 +19,7 @@ heroBlock:
 #    image:
 #      filename: research_topic.jpg
     text: |
-      The APEC (Animal Physiological Ecology and Conservation) Lab at Sun Yat-sen University focuses on the physiological ecology and conservation of terrestrial animals, especially reptiles and birds. Our research integrates field and controlled experiments with mechanistic and statistical models to explore how animals interact with their environment. By studying physiological responses and ecological dynamics, we assess species’ adaptability and vulnerability to environmental change. Our work aims to enhance biodiversity conservation by bridging experimental research with predictive modeling.
+      The **APEC (Animal Physiological Ecology and Conservation) Lab** at Sun Yat-sen University focuses on the physiological ecology and conservation of terrestrial animals, especially reptiles and birds. Our research integrates field and controlled experiments with mechanistic and statistical models to explore how animals interact with their environment. By studying physiological responses and ecological dynamics, we assess species’ adaptability and vulnerability to environmental change. **Our work aims to enhance biodiversity conservation by bridging experimental research with predictive modeling.**
 
   
 heroSlideBlock:
@@ -34,8 +34,8 @@ heroSlideBlock:
           filename: group_slides/group_members_202509.jpg
           filters:
             brightness: 1.1
-        position: right
-        color: '#666'  
+        position: center
+        color: '#fff'  
     # - title: 
     #   content: 
     #   align: left
@@ -48,7 +48,7 @@ heroSlideBlock:
     #     color: '#666'  
   design:
     # Slide height is automatic unless you force a specific height (e.g. '400px')
-    slide_height: '400px'
+    slide_height: '600px'
     is_fullscreen: false
     # Automatically transition through slides?
     loop: false
@@ -59,7 +59,7 @@ heroSlideBlock:
 newsBlock:
   block: collection
   content:
-    title: Latest News
+    title: News
     count: 5
     filters:
       author: ''
@@ -118,7 +118,7 @@ sections:
   
   - block: collection
     content:
-      title: Latest News
+      title: News
       subtitle:
       text:
       count: 5

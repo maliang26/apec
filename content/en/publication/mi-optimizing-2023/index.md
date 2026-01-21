@@ -9,7 +9,7 @@ title: Optimizing protected areas to boost the conservation of key protected wil
 authors:
 - Chunrong Mi
 - Kai Song
-- Liang Ma
+- "**Liang Ma**"
 - Jiliang Xu
 - Baojun Sun
 - Yuehua Sun

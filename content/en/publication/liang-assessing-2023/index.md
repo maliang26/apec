@@ -9,7 +9,7 @@ authors:
 - Dan Liang
 - Xingli Giam
 - Sifan Hu
-- Liang Ma
+- "**Liang Ma**"
 - David S Wilcove
 
 # Author notes (such as 'Equal Contribution')

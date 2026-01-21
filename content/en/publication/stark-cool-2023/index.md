@@ -8,7 +8,7 @@ title: 'Cool shade and not-so-cool shade: How habitat loss may accelerate therma
 # write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
 authors:
 - Gavin Stark
-- Liang Ma
+- "**Liang Ma**"
 - Zhi-Gao Zeng
 - Wei-Guo Du
 - Ofir Levy
