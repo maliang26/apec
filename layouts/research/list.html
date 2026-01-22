@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<div class="universal-wrapper">
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Content }}
+  <div class="article-style mb-5">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  {{ range .Pages }}
+    <div class="news-item-card">
+      <h2 class="article-title mb-3 mt-0" style="font-family: Georgia, serif; font-weight: bold; font-size: 1.8rem;">
+        {{ .Title }}
+      </h2>
+      <div class="article-style" style="font-family: Georgia, serif; color: #444; line-height: 1.6; font-size: 1.1rem;">
+        {{ .Content }}
+      </div>
+    </div>
+  {{ end }}
+</div>
+
+{{ end }}

@@ -1,18 +1,27 @@
 // Override this file to add your own SCSS styling.
 
-$navbar-theme-bg-primary:  #1565c0; 
-$navbar-theme-text-primary:  #fff; 
-$navbar-theme-top-line-primary:  #8dc015;
+// Theme Color Palette
+$color-deep-dark:    #17252A; // (23, 37, 42)
+$color-primary-dark: #2B7A78; // (43, 122, 120)
+$color-primary-teal: #3AAFA9; // (58, 175, 169)
+$color-light-tint:   #DEF2F1; // (222, 242, 241)
+$color-white:        #FEFFFF; // (254, 255, 255)
+
+$navbar-theme-bg-primary: $color-primary-teal; 
+$navbar-theme-text-primary: $color-white; 
 
 /* --- GLOBAL STYLES --- */
 
 html, body {
   font-family: Georgia, "Times New Roman", Times, serif !important;
+  background-color: $color-light-tint !important;
+  color: $color-deep-dark !important;
 }
 
 // Ensure all heading levels also use Georgia
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Georgia, serif !important;
+  color: $color-deep-dark !important;
 }
 
 .user-icon-avatar {
@@ -21,11 +30,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: darkgrey;
+  background-color: $color-light-tint;
   font-size: 4rem;
   margin: 0 auto;
   object-fit: cover;
-  color: #666;
+  color: $color-deep-dark;
 }
 
 /* --- BANNER & VIDEO --- */
@@ -33,15 +42,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .home-video-wrapper {
   position: relative;
   
-  // This is the container for the transparent navbar overlay
   .overlay-navbar {
     position: absolute !important;
     top: 0;
-    left: 50% !important;
-    transform: translateX(-50%);
-    width: 100vw !important;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000;
+    background-color: rgba($color-light-tint, 0.85) !important; // Light Tint with opacity
     padding: 1rem 0;
   }
 
@@ -55,9 +62,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba($color-white, 0.2);
     border: none;
-    color: #fff;
+    color: $color-white;
     font-size: 2rem;
     padding: 1rem;
     cursor: pointer;
@@ -71,51 +78,53 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-      color: #000;
+      background-color: rgba($color-white, 0.5);
+      color: $color-deep-dark;
     }
 
-    &.left {
-      left: 2rem;
-    }
-
-    &.right {
-      right: 2rem;
-    }
+    &.left { left: 2rem; }
+    &.right { right: 2rem; }
   }
 }
 
-/* --- PAGE HEADINGS (Non-Homepage) --- */
+/* --- PAGE HEADINGS & NAVBAR (Global) --- */
 
+.page-header {
+  background-color: rgba($color-light-tint, 0.85) !important;
+  width: 100% !important;
+  padding: 1rem 0 !important;
+  z-index: 1000 !important;
+}
+
+// Heading Styles
 .universal-wrapper h1, 
 .article-container h1,
 .page-header h1,
-.people-widget-container h1, /* Added for People Page */
-.section-heading h1 {        /* Added for generic section headings */
+.people-widget-container h1, 
+.section-heading h1 {
   font-family: Georgia, serif !important;
   font-weight: 900 !important;
   font-size: 3.5rem !important;
-  color: #000 !important; // Black
+  color: $color-deep-dark !important; 
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
-  padding-bottom: 1rem !important;
-  border-bottom: 4px solid #1565c0 !important; // Theme Blue underline
+  padding: 0.5rem 2rem 1rem 1rem !important;
+  background-color: $color-light-tint !important;
+  border-bottom: 4px solid $color-primary-dark !important; // Primary Dark line
   display: inline-block;
   text-align: left !important;
   display: block !important; 
   width: fit-content !important;
-  padding-right: 2rem;
 }
 
-// Ensure parent containers align items to the left
 .universal-wrapper, .article-container {
   text-align: left !important;
   align-items: flex-start !important;
-}
-
-// Clean up the main container to ensure headings have room
-.universal-wrapper, .article-container {
   padding-top: 2rem;
+  background-color: $color-light-tint !important; // Content area background
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  padding: 2rem;
 }
 
 .navbar {
@@ -126,22 +135,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding: 0 !important;
 }
 
-// Ensure the container inside the navbar allows full width and space-between alignment
 .navbar .container-xl {
   display: flex !important;
-  flex-direction: row !important; // Same row
+  flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center !important;
-  justify-content: space-between !important; // Left and Right
+  justify-content: space-between !important;
   max-width: 100% !important;
   width: 100% !important;
-  padding: 0 4rem !important; // Add some side padding for breathing room
+  padding: 0 1rem !important;
+  @media (min-width: 768px) {
+    padding: 0 2rem !important;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 4rem !important;
+  }
 }
 
-// 1. BRAND (Left side with subtitle)
+// 1. BRAND
 .d-none.d-lg-inline-flex {
   display: flex !important;
-  flex-direction: column !important; // Stack Brand and Subtitle
+  flex-direction: column !important;
   align-items: flex-start !important;
   width: auto !important;
   justify-content: center;
@@ -152,94 +166,100 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     content: "Animal Physiological Ecology and Conservation";
     display: block;
     font-family: Georgia, serif !important;
-    color: #000;
-    font-size: 1.1rem !important; // Smaller subtitle
+    color: $color-deep-dark;
+    font-size: 1.1rem !important;
     font-weight: 400;
-    margin-top: -0.5rem; // Pull closer to brand
+    margin-top: -0.5rem;
     text-align: left;
   }
 }
 
 .navbar-brand {
   font-family: Georgia, serif !important;
-  color: #000 !important;
+  color: $color-deep-dark !important;
   margin-right: 0 !important;
   padding: 0 !important;
   font-weight: 900 !important;
-  font-size: 3.9rem !important; // Slightly smaller than 4.2rem
+  font-size: 2.5rem !important;
   letter-spacing: 0.02em;
   text-align: left;
 }
 
-// 2. MENU (Right side)
+// 2. MENU
 .navbar-collapse {
   display: flex !important;
-  width: auto !important; // Not full width anymore
+  width: auto !important;
   justify-content: flex-end !important;
   order: 2;
 }
 
-.main-menu-item {
-  width: auto !important;
-  justify-content: flex-end !important;
-}
-
-#navbar-main .main-menu-item ul {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  justify-content: flex-end !important;
-  width: auto !important;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 #navbar-main .main-menu-item ul li .nav-link {
   font-family: Georgia, serif !important;
-  color: #000 !important;
+  color: $color-deep-dark !important;
   padding: 0.5rem 1.5rem !important;
   font-size: 1.5rem !important;
   font-weight: 400 !important;
   text-transform: capitalize;
-  white-space: nowrap !important;
-  &:hover { 
-    color: #444 !important; 
-  }
+  &:hover { color: $color-primary-dark !important; }
   &.active { 
-    color: #000 !important;
+    color: $color-deep-dark !important;
     text-decoration: underline;
+    text-decoration-color: $color-primary-dark;
   }
 }
-
-// Hide unwanted elements (Only toggler, keeping icons visible now)
-.navbar-toggler { display: none !important; }
 
 .nav-icons {
   display: flex !important;
+  justify-content: flex-end !important;
   order: 3 !important;
-  margin-left: 1.5rem !important; // Space between menu and search
-  align-items: center !important;
-  justify-content: center !important;
 }
 
 .nav-icons .nav-link {
-  color: #000 !important;
-  font-size: 1.4rem !important; // Match visual weight of text
-  padding: 0.5rem !important;
+  color: $color-deep-dark !important;
+  font-size: 1.4rem !important;
+}
+
+/* --- FOOTER --- */
+.page-footer {
+  background-color: $color-light-tint !important;
+  color: $color-deep-dark !important;
+  padding: 0.1rem 0 !important;
+  margin-top: 1rem !important;
+}
+
+.page-footer a { color: $color-deep-dark !important; }
+
+.page-footer p {
+  color: $color-deep-dark !important;
+  margin: 0 !important;
 }
 
 /* --- OTHER STYLES --- */
 
+#section-hero {
+  background-color: $color-light-tint !important;
+}
+
 .people-list-wrap .person-group-name {
   margin-top: 2rem;
-  border-bottom: 2px solid #1565c0;
+  border-bottom: 2px solid $color-primary-dark;
   display: inline-block;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
 
-// Clean up old people styles
-.people-persons-list-row {
+.people-persons-list-row { display: none !important; }
+
+.share-box {
   display: none !important;
+}
+
+.news-item-card {
+  background-color: $color-white !important;
+  border-left: 6px solid $color-primary-dark !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  transition: transform 0.2s;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }

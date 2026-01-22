@@ -1,0 +1,46 @@
+{{- define "main" -}}
+
+<div class="article-container pt-3">
+  <h1>{{ .Title }}</h1>
+  
+  <div class="article-metadata mb-3" style="font-family: Georgia, serif; color: #777; font-size: 0.95rem;">
+    <span class="article-date">
+      {{ .Date.Format "January 2, 2006" }}
+    </span>
+    {{ with .Params.authors }}
+    <span class="middot-divider"></span>
+    <span class="article-authors">
+      {{ range $index, $author := . }}
+        {{ if $index }}, {{ end }}{{ $author }}
+      {{ end }}
+    </span>
+    {{ end }}
+  </div>
+</div>
+
+<div class="article-container" style="padding-top: 0 !important;">
+  <div class="news-item-card">
+    
+    {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ with $featured }}
+    <div class="featured-image mb-4">
+      <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" style="width: 100%; border-radius: 4px;">
+    </div>
+    {{ end }}
+
+    <div class="article-style" style="font-family: Georgia, serif; color: #444; line-height: 1.6; font-size: 1.1rem;">
+      {{ .Content }}
+    </div>
+    
+    {{ if .Params.tags }}
+    <div class="article-tags mt-4">
+      <i class="fas fa-tags mr-1"></i>
+      {{ range .Params.tags }}
+        <a class="badge badge-light" href="{{ (site.GetPage (printf "tags/%s" .)).RelPermalink }}">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{- end -}}

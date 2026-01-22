@@ -6,8 +6,8 @@
 # Appearance
 
 appearance:
-  theme_day: minimal
-  # theme_day: apec
+  # theme_day: minimal
+  theme_day: apec
   theme_night:
   font: native
   font_size: M  # S   M   L

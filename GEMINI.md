@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project contains the source code for **The APEC Lab** website (Assessment, Planning, Ecology, Conservation?). It is a static site built using **Hugo**, specifically utilizing the **Wowchemy (now Hugo Blox)** Research Group template.
+This project contains the source code for **The APEC Lab** website. It is a static site built using **Hugo**, specifically utilizing the **Wowchemy (now Hugo Blox)** Research Group template.
 
 The site is designed to showcase the research group's:
 *   Members (`content/en/authors/`)
@@ -67,3 +67,13 @@ hugo mod tidy
 *   **Content:** Written in Markdown (mostly `.md` files). Front matter is typically in YAML.
 *   **Citations:** Publications can be imported or managed via `cite.bib` files in their respective folders.
 *   **Styling:** Use `assets/scss/custom.scss` for style overrides to ensure they persist after theme updates.
+
+## Theme Colors
+
+The following colors are used as the primary theme for the APEC Lab website:
+*   **Deep Dark (Text/Accents):** `#17252A` (23, 37, 42)
+*   **Primary Dark (Heading Underlines):** `#2B7A78` (43, 122, 120)
+*   **Primary Teal (Banner/Footer):** `#3AAFA9` (58, 175, 169)
+*   **Light Tint (Backgrounds):** `#DEF2F1` (222, 242, 241)
+*   **White (Clean Text/BG):** `#FEFFFF` (254, 255, 255)
+

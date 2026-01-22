@@ -12,7 +12,7 @@
   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
 {{ end }}
 
-<div class="news-item-card mb-4 p-4" style="background: #fff; border-left: 6px solid #1565c0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 4px; transition: transform 0.2s;">
+<div class="news-item-card">
   
   <div class="article-metadata mb-2" style="font-family: Georgia, serif; color: #777; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em;">
     {{ if $item.Params.publication_short }}
@@ -35,7 +35,7 @@
   </div>
 
   <div class="mt-3">
-    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} style="font-family: Georgia, serif; color: #1565c0; font-weight: bold; text-decoration: none; font-size: 0.95rem;">
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} style="font-family: Georgia, serif; color: #2B7A78; font-weight: bold; text-decoration: none; font-size: 0.95rem;">
       Read More &rarr;
     </a>
   </div>

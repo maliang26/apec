@@ -1,7 +1,7 @@
 ---
 title: Open Postdoc Positions
 date: 2025-09-18
-share: true
+share: false
 show_contact_form: false
 ---
 

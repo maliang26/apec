@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="universal-wrapper">
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Content }}
+  <div class="article-style mb-5">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <div class="news-item-card" style="border-left: none !important; padding: 2rem !important;">
+    {{ range .Pages }}
+      {{ partial "views/citation.html" (dict "item" . "index" 0) }}
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

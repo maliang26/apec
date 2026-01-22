@@ -17,9 +17,9 @@ main:
 #    weight: 60
 
 
-#  - name: Research
-#    url: research
-#    weight: 20
+  - name: Research
+    url: research
+    weight: 20
 
 
   - name: People

@@ -35,7 +35,7 @@
             font-family: Georgia, serif; 
             font-weight: bold; 
             font-size: 1.8rem; 
-            color: #000; 
+            color: #17252A; 
             margin-bottom: 2rem; 
             padding-bottom: 0; 
             border-bottom: none; 
@@ -87,13 +87,13 @@
                         
                         <!-- Header: Name only -->
                         <div class="d-flex align-items-start mb-1">
-                            <h3 style="font-family: Georgia, serif; font-weight: bold; font-size: 1.7rem; margin-bottom: 0; color: #000; line-height: 1.2;">
-                              <a href="{{ .RelPermalink }}" style="color: #000; text-decoration: none;">{{ .Title }}</a>
+                            <h3 style="font-family: Georgia, serif; font-weight: bold; font-size: 1.7rem; margin-bottom: 0; color: #17252A; line-height: 1.2;">
+                              <a href="{{ .RelPermalink }}" style="color: #17252A; text-decoration: none;">{{ .Title }}</a>
                             </h3>
                         </div>
 
                         {{ if and $show_role .Params.role }}
-                          <div style="font-family: Georgia, serif; font-size: 1.1rem; color: #1565c0; font-weight: 500; margin-bottom: 0.8rem;">{{ .Params.role | markdownify | emojify }}</div>
+                          <div style="font-family: Georgia, serif; font-size: 1.1rem; color: #2B7A78; font-weight: 500; margin-bottom: 0.8rem;">{{ .Params.role | markdownify | emojify }}</div>
                         {{ end }}
 
                         {{ if .Content }}
@@ -117,7 +117,7 @@
   .people-card:hover {
     transform: scale(1.01);
     box-shadow: 0 10px 25px rgba(21, 101, 192, 0.15) !important;
-    border-color: #1565c0 !important;
+    border-color: #2B7A78 !important;
   }
   .p-social-links a {
     color: #666 !important;
@@ -125,7 +125,7 @@
     transition: color 0.2s;
   }
   .p-social-links a:hover {
-    color: #1565c0 !important;
+    color: #2B7A78 !important;
   }
 </style>
 
