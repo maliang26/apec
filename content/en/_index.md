@@ -69,6 +69,8 @@ newsBlock:
       tag: ''
     offset: 0
     order: desc
+    folders:
+      - post
     page_type: post
   design:
     view: card
@@ -130,6 +132,8 @@ sections:
         tag: ''
       offset: 0
       order: desc
+      folders:
+        - post
       page_type: post
     design:
       view: card

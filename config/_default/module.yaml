@@ -5,6 +5,25 @@
 ############################
 
 imports:
+  - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-core
+    mounts:
+      - source: layouts/_partials
+        target: layouts/partials
+      - source: layouts/_shortcodes
+        target: layouts/shortcodes
+  - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-seo
+    mounts:
+      - source: layouts/_partials
+        target: layouts/partials
+      - source: layouts/_markup
+        target: layouts
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-decap-cms
+    mounts:
+      - source: data
+        target: data
+      - source: functions
+        target: layouts/partials/mod-decap-cms
+      - source: templates
+        target: layouts/decap_cms
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5

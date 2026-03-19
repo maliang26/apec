@@ -15,27 +15,28 @@ The site is designed to showcase the research group's:
 
 To work on this project, you need:
 
-*   **Hugo:** A static site generator. The `netlify.toml` specifies `HUGO_VERSION = "0.135.0"`. It is recommended to use the "extended" version of Hugo for SCSS/SASS support.
+*   **Hugo:** A static site generator. The `netlify.toml` specifies `HUGO_VERSION = "0.135.0"`. 
+    *   **IMPORTANT:** A local version of **Hugo v0.135.0 (Extended)** is provided in the `bin/` directory to resolve build errors with modern Hugo Blox modules.
 *   **Go:** Required for managing Hugo Modules (dependencies).
 
 ## Building and Running
 
 ### Local Development
 
-To run the site locally with live reloading:
+To run the site locally with live reloading, you must use the local binary:
 
 ```bash
-hugo server
+./bin/hugo server
 ```
 
-By default, the site will be available at `http://localhost:1313`.
+By default, the site will be available at `http://localhost:1313/apec/`.
 
 ### Production Build
 
-To build the static files for production (output to `public/` directory):
+To build the static files for production using the local binary:
 
 ```bash
-hugo --gc --minify
+./bin/hugo --gc --minify
 ```
 
 ### Dependency Management
