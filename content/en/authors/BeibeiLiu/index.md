@@ -59,4 +59,4 @@ user_groups:
   - Master Student
 ---
 
-My current research focuses on using maize as an example to explore the spatiotemporal patterns of crop canopy microclimate by constructing a microclimate model, providing reference for ensuring food security and studying related ecological processes.
+My research focuses on canopy microclimate modeling. Previously, I explored the spatial and temporal variations in microclimate within maize canopy and their impacts on pest development. Currently, my work focuses on applying machine learning methods and UAV imagery to predict the understory microclimate on Shedao Island, aiming to assess the thermal environment suitability for the Shedao pit viper.
