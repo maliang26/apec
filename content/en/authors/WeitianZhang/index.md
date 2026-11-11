@@ -21,7 +21,7 @@ organizations:
     url: '/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include .....
+bio:
 
 interests:
 
@@ -33,9 +33,6 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:zhangwd26@mail2.sysu.edu.cn'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -52,12 +49,11 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Undergraduate Student
+  - Alumni
 ---
 
 An undergraduate student in the School of Ecology since 2022. 
 
 Research interests: focus on the physiological ecology of reptiles, their habitats, species distribution, and activity rhythms. 
 
-Habits: long-distance running, mountain climbing, playing volleyball, and engaging in tabletop games. 
-
+Habits: long-distance running, mountain climbing, playing volleyball, and engaging in tabletop games.

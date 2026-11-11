@@ -54,7 +54,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Undergraduate Student
+  - PhD Student
 ---
 
 By measuring feather reflectance of bird specimens, my research focuses on exploring the correlation between visible light reflectance and near-infrared reflectance of bird feathers, as well as the interspecific and geographical differences of reflectance, providing new empirical evidence for in-depth understanding of the ecological function and evolutionary adaptation of bird feather reflectance.

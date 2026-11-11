@@ -52,8 +52,10 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/JUNQI-FAN
-    
-    
+
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/drinkyjunqifan/
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -71,5 +73,5 @@ email: ''
 <!-- After earning my Bachelor's in Ecology from Sun Yat-Sen University in 2025, I chose to continue my PhD study there. My work is at the intersection of ecological modeling and biodiversity conservation. I apply a range of tools—from physiological and statistical models to geospatial analysis—to tackle sustainability challenges in the human-nature system. My current research focuses on several areas: projecting climate-driven human-wildlife conflicts in China, investigating the phenological mismatch of a protected viper species, and evaluating the effectiveness of protected areas in preserving the gibbon's physiological niche.
 A deep enjoyment for both urban and natural landscapes is the source of passion for my studies. I see activities like observing nature, traveling, reading, and watching films as essential ways of understanding the world. Additionally, I am a huge fan of rock music and tabletop RPGs. -->
 
-After earning my Bachelor's in Ecology from Sun Yat-Sen University in 2025, I continue my PhD study there. My work is at the intersection of ecological modeling and biodiversity conservation. I apply a range of tools—from physiological and statistical models to geospatial analysis—to tackle sustainability challenges in the human-nature system, including climate-driven human-wildlife conflict, phenological mismatch and protected areas’ effectiveness. A enjoyment for both urban and natural scenery is the source of passion for my studies. I see activities like observing nature and traveling as my essential ways of understanding the world. I am also a huge fan of rock music and tabletop RPGs.
+I am interested in predictive and interpretable models, and their applications in conservation biology. My research to date spans from analyzing the spatial overlap between wildlife and human activities to modeling the energetic consequences of temporal mismatches between ectothermic predators and their resources. What brings it together is a drive to understand the anthropogenic biodiversity loss and provide early-warning insights for conservation. A enjoyment for both cities and nature is what inspires my work. I see observing, reading, and traveling as equally essential ways to understand our world. I am also a huge fan of music and tabletop RPGs.
 

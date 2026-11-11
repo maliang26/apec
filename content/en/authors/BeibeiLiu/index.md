@@ -56,7 +56,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Undergraduate Student
+  - Master Student
 ---
 
 My current research focuses on using maize as an example to explore the spatiotemporal patterns of crop canopy microclimate by constructing a microclimate model, providing reference for ensuring food security and studying related ecological processes.
