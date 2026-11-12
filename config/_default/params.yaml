@@ -9,7 +9,7 @@ appearance:
   # theme_day: minimal
   theme_day: apec
   theme_night:
-  font: native
+  font: apec_youtube
   font_size: M  # S   M   L
 
 # SEO

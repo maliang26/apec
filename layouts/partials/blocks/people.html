@@ -32,16 +32,7 @@
       {{if $query }}
         <div class="people-group-wrapper mt-5 mb-4">
           {{/* SUBSECTION HEADING */}}
-          <h2 class="person-group-name" style="
-            font-family: Georgia, serif; 
-            font-weight: bold; 
-            font-size: 1.8rem; 
-            color: #17252A; 
-            margin-bottom: 2rem; 
-            padding-bottom: 0; 
-            border-bottom: none; 
-            display: block;
-          ">{{ . | markdownify }}</h2>
+          <h2 class="person-group-name">{{ . | markdownify }}</h2>
 
           <div class="people-list">
             {{ range $query }}
@@ -87,17 +78,17 @@
                         
                         <!-- Header: Name only -->
                         <div class="d-flex align-items-start mb-1">
-                            <h3 style="font-family: Georgia, serif; font-weight: bold; font-size: 1.7rem; margin-bottom: 0; color: #17252A; line-height: 1.2;">
+                            <h3 class="mb-0">
                               <a href="{{ .RelPermalink }}" style="color: #17252A; text-decoration: none;">{{ .Title }}</a>
                             </h3>
                         </div>
 
                         {{ if and $show_role .Params.role }}
-                          <div style="font-family: Georgia, serif; font-size: 1.1rem; color: #17252A; font-weight: 500; margin-bottom: 0.8rem;">{{ .Params.role | markdownify | emojify }}</div>
+                          <div class="person-role mb-2">{{ .Params.role | markdownify | emojify }}</div>
                         {{ end }}
 
                         {{ if .Content }}
-                          <div class="people-summary" style="font-family: Georgia, serif; font-size: 1.05rem; color: #17252A; line-height: 1.5; margin-top: 0.5rem;">
+                          <div class="people-summary mt-2">
                             {{ .Content | markdownify | emojify }}
                           </div>
                         {{ end }}
