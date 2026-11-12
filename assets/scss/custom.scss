@@ -128,9 +128,9 @@ h3, .h3,
   box-shadow: none !important;
 }
 
-// Card & Button Borders in Font Color (No Underlines)
-.card-simple, .view-card {
-  border: 1px solid $color-deep-dark !important;
+// Frameless Cards (No Borders or Shadows)
+.card-simple, .view-card, .people-card {
+  border: none !important;
   box-shadow: none !important;
 }
 
@@ -365,8 +365,8 @@ h3, .h3,
 
 .news-item-card {
   background-color: $color-white !important;
-  border: 1px solid $color-deep-dark !important;
-  border-left: 6px solid $color-deep-dark !important;
+  border: none !important;
+  border-left: none !important;
   box-shadow: none !important;
   border-radius: 4px;
   padding: 1.5rem !important;
