@@ -3,21 +3,21 @@ name = "Apec"
 
 [light]
   # Primary
-  primary = "#3AAFA9" # Primary Teal
+  primary = "#17252A" # Font Color
 
   # Menu
-  menu_primary = "#3AAFA9" # Primary Teal
-  menu_text = "#DEF2F1" # Light Tint
-  menu_text_active = "#FEFFFF" # White
-  menu_title = "#FEFFFF" # White
+  menu_primary = "#FFFFFF" # Pure White
+  menu_text = "#17252A" # Font Color
+  menu_text_active = "#17252A" # Font Color
+  menu_title = "#17252A" # Font Color
 
   # Home sections
-  home_section_odd = "#FEFFFF" # White
-  home_section_even = "#DEF2F1" # Light Tint
+  home_section_odd = "#FFFFFF" # Pure White
+  home_section_even = "#FFFFFF" # Pure White
 
 [dark]
   # Primary
-  primary = "#3AAFA9" # Primary Teal
+  primary = "#17252A" # Font Color
 
-  link = "#3AAFA9" # Primary Teal
-  link_hover = "#2B7A78" # Primary Dark
+  link = "#17252A" # Font Color
+  link_hover = "#17252A" # Font Color

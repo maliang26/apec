@@ -71,10 +71,7 @@ hugo mod tidy
 
 ## Theme Colors
 
-The following colors are used as the primary theme for the APEC Lab website:
-*   **Deep Dark (Text/Accents):** `#17252A` (23, 37, 42)
-*   **Primary Dark (Heading Underlines):** `#2B7A78` (43, 122, 120)
-*   **Primary Teal (Banner/Footer):** `#3AAFA9` (58, 175, 169)
-*   **Light Tint (Backgrounds):** `#DEF2F1` (222, 242, 241)
-*   **White (Clean Text/BG):** `#FEFFFF` (254, 255, 255)
+The website uses a strict two-color palette:
+*   **Deep Dark (Text, Headings, Links & Borders):** `#17252A` (23, 37, 42)
+*   **Pure White (All Backgrounds):** `#FFFFFF` (255, 255, 255)
 

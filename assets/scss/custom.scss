@@ -1,27 +1,72 @@
 // Override this file to add your own SCSS styling.
 
-// Theme Color Palette
-$color-deep-dark:    #17252A; // (23, 37, 42)
-$color-primary-dark: #2B7A78; // (43, 122, 120)
-$color-primary-teal: #3AAFA9; // (58, 175, 169)
-$color-light-tint:   #DEF2F1; // (222, 242, 241)
-$color-white:        #FEFFFF; // (254, 255, 255)
+// Strict Two-Color Theme Palette
+$color-deep-dark:    #17252A; // (23, 37, 42) - Font & Border Color
+$color-white:        #FFFFFF; // (255, 255, 255) - Pure White Background
 
-$navbar-theme-bg-primary: $color-primary-teal; 
-$navbar-theme-text-primary: $color-white; 
+$color-primary-dark: $color-deep-dark;
+$color-primary-teal: $color-deep-dark;
+$color-light-tint:   $color-white;
+
+$navbar-theme-bg-primary: $color-white; 
+$navbar-theme-text-primary: $color-deep-dark; 
 
 /* --- GLOBAL STYLES --- */
 
 html, body {
   font-family: Georgia, "Times New Roman", Times, serif !important;
-  background-color: $color-light-tint !important;
+  background-color: $color-white !important;
   color: $color-deep-dark !important;
 }
 
-// Ensure all heading levels also use Georgia
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+// Ensure all heading levels, text, links, and metadata use the single font color
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+p, span, div, li, a, a:hover, a:focus, a:active,
+.article-metadata, .article-date, .article-reading-time, .pub-publication,
+.article-style, .section-subheading a, .see-all a, .pub-icon {
   font-family: Georgia, serif !important;
   color: $color-deep-dark !important;
+}
+
+// Ensure all sections and containers have pure white background
+.home-section,
+.home-section:nth-of-type(even),
+.home-section:nth-of-type(odd),
+#section-hero,
+#section-news,
+#section-people,
+.universal-wrapper,
+.article-container,
+.card-simple,
+.view-card,
+.people-card,
+.news-item-card,
+.modal-content {
+  background-color: $color-white !important;
+  background: $color-white !important;
+  box-shadow: none !important;
+}
+
+// Card & Button Borders in Font Color
+.card-simple, .view-card {
+  border: 1px solid $color-deep-dark !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-primary,
+.btn-primary {
+  background-color: $color-white !important;
+  color: $color-deep-dark !important;
+  border-color: $color-deep-dark !important;
+  box-shadow: none !important;
+
+  &:hover, &:focus, &:active {
+    background-color: $color-white !important;
+    color: $color-deep-dark !important;
+    border-color: $color-deep-dark !important;
+    text-decoration: underline !important;
+    box-shadow: none !important;
+  }
 }
 
 .user-icon-avatar {
@@ -30,7 +75,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $color-light-tint;
+  background-color: $color-white;
   font-size: 4rem;
   margin: 0 auto;
   object-fit: cover;
@@ -48,7 +93,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     left: 0 !important;
     width: 100% !important;
     z-index: 1000;
-    background-color: rgba($color-light-tint, 0.85) !important; // Light Tint with opacity
+    background-color: $color-white !important;
     padding: 1rem 0;
   }
 
@@ -62,9 +107,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba($color-white, 0.2);
-    border: none;
-    color: $color-white;
+    background-color: $color-white;
+    border: 1px solid $color-deep-dark;
+    color: $color-deep-dark;
     font-size: 2rem;
     padding: 1rem;
     cursor: pointer;
@@ -75,10 +120,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    transition: none;
+
+    i {
+      color: $color-deep-dark !important;
+    }
 
     &:hover {
-      background-color: rgba($color-white, 0.5);
+      background-color: $color-white;
       color: $color-deep-dark;
     }
 
@@ -90,7 +139,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /* --- PAGE HEADINGS & NAVBAR (Global) --- */
 
 .page-header {
-  background-color: rgba($color-light-tint, 0.85) !important;
+  background-color: $color-white !important;
   width: 100% !important;
   padding: 1rem 0 !important;
   z-index: 1000 !important;
@@ -101,7 +150,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .article-container h1,
 .page-header h1,
 .people-widget-container h1, 
-.section-heading h1 {
+.section-heading h1,
+#section-news h1 {
   font-family: Georgia, serif !important;
   font-weight: 900 !important;
   font-size: 3.5rem !important;
@@ -109,9 +159,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   padding: 0.5rem 2rem 1rem 1rem !important;
-  background-color: $color-light-tint !important;
-  border-bottom: 4px solid $color-primary-dark !important; // Primary Dark line
-  display: inline-block;
+  background-color: $color-white !important;
+  border-bottom: 4px solid $color-deep-dark !important;
   text-align: left !important;
   display: block !important; 
   width: fit-content !important;
@@ -121,14 +170,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   text-align: left !important;
   align-items: flex-start !important;
   padding-top: 2rem;
-  background-color: $color-light-tint !important; // Content area background
+  background-color: $color-white !important;
   margin-bottom: 2rem;
   border-radius: 8px;
   padding: 2rem;
 }
 
 .navbar {
-  background-color: transparent !important; 
+  background-color: $color-white !important; 
   width: 100% !important;
   border: none !important;
   box-shadow: none !important;
@@ -200,11 +249,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-size: 1.5rem !important;
   font-weight: 400 !important;
   text-transform: capitalize;
-  &:hover { color: $color-primary-dark !important; }
+  &:hover {
+    color: $color-deep-dark !important;
+    text-decoration: underline;
+    text-decoration-color: $color-deep-dark;
+  }
   &.active { 
     color: $color-deep-dark !important;
     text-decoration: underline;
-    text-decoration-color: $color-primary-dark;
+    text-decoration-color: $color-deep-dark;
   }
 }
 
@@ -221,7 +274,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* --- FOOTER --- */
 .page-footer {
-  background-color: $color-light-tint !important;
+  background-color: $color-white !important;
   color: $color-deep-dark !important;
   padding: 0.1rem 0 !important;
   margin-top: 1rem !important;
@@ -237,12 +290,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /* --- OTHER STYLES --- */
 
 #section-hero {
-  background-color: $color-light-tint !important;
+  background-color: $color-white !important;
 }
 
 .people-list-wrap .person-group-name {
   margin-top: 2rem;
-  border-bottom: 2px solid $color-primary-dark;
+  border-bottom: 2px solid $color-deep-dark;
   display: inline-block;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
@@ -256,10 +309,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .news-item-card {
   background-color: $color-white !important;
-  border-left: 6px solid $color-primary-dark !important;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid $color-deep-dark !important;
+  border-left: 6px solid $color-deep-dark !important;
+  box-shadow: none !important;
   border-radius: 4px;
-  transition: transform 0.2s;
   padding: 1.5rem !important;
   margin-bottom: 1.5rem !important;
 }
