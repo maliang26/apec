@@ -86,14 +86,13 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 {{ $heroBlock := .Params.heroBlock }}
 {{ $slider_hash_id := "hero_sliders" }}
 {{ $slider_args := dict "wcPage" $ "wcBlock" .Params.heroSlideBlock "wcIdentifier" $slider_hash_id }}
-<section id="section-hero" class="home-section wg-hero" style="padding: 20px 0;">
-  <div class="container-fluid px-4 px-md-5"> <!-- Wide width with healthy margins -->
+<section id="section-hero" class="home-section wg-hero" style="padding: 0;">
+  <div class="site-page-container" style="padding-top: 1.5rem !important; padding-bottom: 1.5rem !important;">
     <div class="row justify-content-center">
       <!-- Row 1: Introduction Text -->
       <div class="col-12 text-center mb-4" style="text-align: left !important;">
-        <h1 class="home-hero-heading text-left">Welcome to the APEC lab!</h1>
-        <h1 class="hero-title" >{{ $heroBlock.content.title }}</h1>
-        <div class="hero-lead" style="max-width: 100%; width: 100%; text-align: left;"> <!-- Align lead text left too? User didn't specify, but looks better with left header. I'll keep it justified or left. -->
+        <h1 class="site-page-title mb-4">Welcome to the APEC lab!</h1>
+        <div class="hero-lead" style="max-width: 100%; width: 100%; text-align: left;">
             {{ $heroBlock.content.text | markdownify }}
         </div>
       </div>
@@ -110,16 +109,16 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 {{ $pubsBlock := .Params.publicationsBlock }}
 {{ $news_args := dict "wcPage" $ "wcBlock" $newsBlock "wcIdentifier" "latest_news" }}
 {{ $pubs_args := dict "wcPage" $ "wcBlock" $pubsBlock "wcIdentifier" "latest_pubs" }}
-<section id="section-news" class="home-section wg-news">
-  <div class="container">
+<section id="section-news" class="home-section wg-news" style="padding: 0;">
+  <div class="site-page-container" style="padding-top: 1.5rem !important; padding-bottom: 1.5rem !important;">
     <div class="row">
       <div class="col-12 col-md-7 text-center text-md-left">
-          <div><h1>{{ $newsBlock.content.title }}</h1></div>
+          <div><h1 class="site-page-title mb-4">{{ $newsBlock.content.title }}</h1></div>
           {{ partial "blocks/collection.html" $news_args }}
       </div>
 
-      <div class="col-12 col-md-5  text-center text-md-left ">
-        <div><h1>{{ $pubsBlock.content.title }}</h1></div>
+      <div class="col-12 col-md-5 text-center text-md-left">
+        <div><h1 class="site-page-title mb-4">{{ $pubsBlock.content.title }}</h1></div>
           {{ partial "blocks/collection.html" $pubs_args }}
       </div>
     </div>
@@ -130,9 +129,7 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 {{ $peopleBlock := .Params.peopleBlock }}
 {{ if $peopleBlock }}
 {{ $people_args := dict "wcPage" $ "wcBlock" $peopleBlock "wcIdentifier" "people" }}
-<section id="section-people" class="home-section wg-people">
-  <div class="container">
-    {{ partial "blocks/people.html" $people_args }}
-  </div>
+<section id="section-people" class="home-section wg-people" style="padding: 0;">
+  {{ partial "blocks/people.html" $people_args }}
 </section>
 {{ end }}

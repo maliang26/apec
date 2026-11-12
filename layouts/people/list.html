@@ -5,14 +5,12 @@
     {{ $show_social := $block.design.show_social | default false }}
     {{ $show_role := $block.design.show_role | default true }}
 
-<div class="people-widget-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px;">
+<div class="site-page-container people-widget-container">
   
   {{/* MAIN PAGE HEADING: "People" */}}
   {{ with $block.content.title }}
-    <div class="section-heading mb-5 text-left">
-      <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
-        {{ with $block.content.subtitle }}<p class="mt-2">{{ . | markdownify | emojify }}</p>{{ end }}
-    </div>
+    <h1 class="site-page-title">{{ . | markdownify | emojify }}</h1>
+    {{ with $block.content.subtitle }}<p class="mt-2">{{ . | markdownify | emojify }}</p>{{ end }}
   {{ end }}
 
   {{ with $block.content.text }}

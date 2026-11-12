@@ -1,9 +1,9 @@
 {{- define "main" -}}
 
-<div class="article-container pt-3">
-  <h1>{{ .Title }}</h1>
+<div class="site-page-container" style="padding-bottom: 0 !important;">
+  <h1 class="site-page-title mb-2">{{ .Title }}</h1>
   
-  <div class="article-metadata mb-3">
+  <div class="article-metadata mb-4">
     <span class="article-date">
       {{ .Date.Format "January 2, 2006" }}
     </span>
@@ -18,8 +18,8 @@
   </div>
 </div>
 
-<div class="article-container" style="padding-top: 0 !important;">
-  <div class="news-item-card">
+<div class="site-page-container" style="padding-top: 0 !important;">
+  <div class="news-item-card" style="padding: 0 !important;">
     
     {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $featured }}

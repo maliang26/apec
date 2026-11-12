@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="site-page-container">
+  <h1 class="site-page-title">{{ .Title }}</h1>
+
+  {{ with .Content }}
+  <div class="article-style mb-4">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  {{ $paginator := .Paginate .Pages }}
+  {{ range $index, $post := $paginator.Pages }}
+    {{ partial "views/compact.html" (dict "item" . "index" $index) }}
+  {{ end }}
+
+  {{ partial "pagination" . }}
+</div>
+
+{{ end }}

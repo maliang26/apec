@@ -4,15 +4,12 @@
 {{ $show_social := $block.design.show_social | default true }}
 {{ $show_role := $block.design.show_role | default true }}
 
-<div class="people-widget-container" style="width: 100%; max-width: 1200px; margin: 0 auto;">
+<div class="site-page-container people-widget-container" style="padding-top: 1.5rem !important; padding-bottom: 1.5rem !important;">
   
   {{/* MAIN PAGE HEADING: "People" */}}
   {{ with $block.content.title }}
-    <div class="section-heading mb-5 text-left">
-      {{/* Global SCSS handles .section-heading h1 styling */}}
-      <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
-        {{ with $block.content.subtitle }}<p class="mt-2">{{ . | markdownify | emojify }}</p>{{ end }}
-    </div>
+    <h1 class="site-page-title mb-4">{{ . | markdownify | emojify }}</h1>
+    {{ with $block.content.subtitle }}<p class="mt-2">{{ . | markdownify | emojify }}</p>{{ end }}
   {{ end }}
 
   {{ with $block.content.text }}

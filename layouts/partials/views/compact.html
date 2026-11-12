@@ -14,7 +14,13 @@
 
 <div class="news-item-card">
   
-  <div class="article-metadata mb-2" style="text-transform: uppercase; letter-spacing: 0.05em;">
+  <h3 class="article-title mb-1 mt-0">
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} style="color: #17252A; text-decoration: none;">
+      {{ $item.Title }}
+    </a>
+  </h3>
+
+  <div class="article-metadata mb-2">
     {{ if $item.Params.publication_short }}
       {{ $item.Params.publication_short | markdownify }}
     {{ else if $item.Params.publication }}
@@ -23,12 +29,6 @@
       {{ $item.Date.Format "January 2, 2006" }}
     {{ end }}
   </div>
-
-  <h3 class="article-title mb-2 mt-0">
-    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} style="color: #17252A; text-decoration: none;">
-      {{ $item.Title }}
-    </a>
-  </h3>
 
   <div class="article-style">
     {{ ($item.Params.summary | default $item.Summary) | plainify | htmlUnescape | chomp | truncate 250 }}

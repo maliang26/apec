@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+{{ $sec := index .Params.sections 0 }}
+{{ $content := $sec.content }}
+
+<div class="site-page-container">
+  <h1 class="site-page-title">{{ .Title }}</h1>
+
+  <div class="contact-details mt-4">
+    <ul class="fa-ul" style="margin-left: 2.5rem; font-size: 1.05rem; line-height: 2;">
+      {{ with $content.email }}
+      <li class="mb-3">
+        <i class="fa-li fas fa-envelope fa-lg" aria-hidden="true" style="color: #17252A;"></i>
+        <span><a href="mailto:{{ . }}" style="color: #17252A; text-decoration: none;">{{ . }}</a></span>
+      </li>
+      {{ end }}
+      {{ with $content.phone }}
+      <li class="mb-3">
+        <i class="fa-li fas fa-phone fa-lg" aria-hidden="true" style="color: #17252A;"></i>
+        <span><a href="tel:{{ . }}" style="color: #17252A; text-decoration: none;">{{ . }}</a></span>
+      </li>
+      {{ end }}
+      {{ if $content.address }}
+      <li class="mb-3">
+        <i class="fa-li fas fa-map-marker-alt fa-lg" aria-hidden="true" style="color: #17252A;"></i>
+        <span>{{ $content.address.street }}, {{ $content.address.region }}, {{ $content.address.country }}</span>
+      </li>
+      {{ end }}
+      {{ with $content.directions }}
+      <li class="mb-3">
+        <i class="fa-li fas fa-compass fa-lg" aria-hidden="true" style="color: #17252A;"></i>
+        <span>{{ . }}</span>
+      </li>
+      {{ end }}
+      {{ with $content.office_hours }}
+      <li class="mb-3">
+        <i class="fa-li fas fa-clock fa-lg" aria-hidden="true" style="color: #17252A;"></i>
+        <span>
+          {{- if not (reflect.IsSlice .)}}{{ . }}{{ else }}{{ delimit . "<br>" }}{{ end -}}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+
+{{ end }}

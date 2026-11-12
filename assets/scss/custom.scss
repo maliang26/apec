@@ -38,6 +38,7 @@ p, span, div, li, a, a:hover, a:focus, a:active,
 
 // Unified Heading Hierarchy (YouTube Scale)
 h1, .h1,
+.site-page-title,
 .universal-wrapper h1, 
 .article-container h1,
 .page-header h1,
@@ -51,8 +52,8 @@ h1, .h1,
   line-height: 1.25 !important;
   letter-spacing: -0.01em !important;
   color: $color-deep-dark !important; 
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 2rem !important;
   padding: 0 !important;
   background-color: $color-white !important;
   border-bottom: none !important;
@@ -228,14 +229,21 @@ h3, .h3,
   z-index: 1000 !important;
 }
 
-.universal-wrapper, .article-container {
-  text-align: left !important;
-  align-items: flex-start !important;
-  padding-top: 2rem;
+.site-page-container,
+.universal-wrapper,
+.article-container,
+.people-widget-container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 2.5rem 2rem 3rem 2rem !important;
   background-color: $color-white !important;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  padding: 2rem;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+.article-reading-time {
+  display: none !important;
 }
 
 .navbar {

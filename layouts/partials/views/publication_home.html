@@ -2,6 +2,10 @@
 
 <div class="card-simple view-card">
 
+  <div class="section-subheading article-title mb-1 mt-0">
+    {{ $item.Title }}
+  </div>
+
   <div class="article-metadata">
     {{ if $item.Params.authors }}
     {{ $authorLen := len $item.Params.authors }}
@@ -34,10 +38,6 @@
       {{ end }}
     </span>
     {{ end }}
-  </div>
-
-  <div class="section-subheading article-title mb-1 mt-3">
-    {{ $item.Title }}
   </div>
 
 </div>
