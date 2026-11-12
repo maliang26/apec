@@ -30,7 +30,7 @@ publication_types:
 publication: '*Conservation Biology*'
 publication_short: ''
 
-doi: ''
+doi: '10.1111/cobi.14056'
 
 abstract: ''
 

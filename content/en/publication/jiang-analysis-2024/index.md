@@ -33,7 +33,7 @@ publication_types:
 publication: '*Ecology*'
 publication_short: ''
 
-doi: ''
+doi: '10.1002/ecy.4414'
 
 abstract: ''
 

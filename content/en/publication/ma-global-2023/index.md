@@ -35,7 +35,7 @@ publication_types:
 publication: '*Nature Communications*'
 publication_short: ''
 
-doi: ''
+doi: '10.1038/s41467-023-35814-8'
 
 abstract: ''
 

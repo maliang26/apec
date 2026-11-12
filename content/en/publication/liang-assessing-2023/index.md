@@ -30,7 +30,7 @@ publication_types:
 publication: '*Nature*'
 publication_short: ''
 
-doi: ''
+doi: '10.1038/s41586-023-06625-0'
 
 abstract: ''
 

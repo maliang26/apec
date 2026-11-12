@@ -31,7 +31,7 @@ publication_types:
 publication: '*Integrative and Comparative Biology*'
 publication_short: ''
 
-doi: ''
+doi: '10.1093/icb/icae043'
 
 abstract: ''
 

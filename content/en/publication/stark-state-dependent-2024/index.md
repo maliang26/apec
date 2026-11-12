@@ -31,7 +31,7 @@ publication_types:
 publication: '*Journal of thermal biology*'
 publication_short: ''
 
-doi: ''
+doi: '10.1016/j.jtherbio.2024.103841'
 
 abstract: ''
 

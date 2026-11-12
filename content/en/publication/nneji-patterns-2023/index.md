@@ -35,7 +35,7 @@ publication_types:
 publication: '*Diversity and Distributions*'
 publication_short: ''
 
-doi: ''
+doi: '10.1111/ddi.13717'
 
 abstract: ''
 

@@ -32,7 +32,7 @@ publication_types:
 publication: '*Global Change Biology*'
 publication_short: ''
 
-doi: ''
+doi: '10.1111/gcb.16656'
 
 abstract: ''
 

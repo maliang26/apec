@@ -34,7 +34,7 @@ publication_types:
 publication: '*The Innovation*'
 publication_short: ''
 
-doi: ''
+doi: '10.1016/j.xinn.2023.100424'
 
 abstract: ''
 
