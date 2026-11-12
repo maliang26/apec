@@ -1,0 +1,44 @@
+{{ $item := .item }}
+
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+<div class="card-simple view-card">
+
+  <div class="article-metadata">
+    {{ if $item.Params.authors }}
+    {{ $authorLen := len $item.Params.authors }}
+    {{ if gt $authorLen 0 }}
+    <div>
+      {{ partial "page_metadata_authors" $item }}
+    </div>
+    {{ end }}
+    {{ end }}
+
+    {{ if ne $item.Params.show_date false }}
+    <span class="article-date">
+      {{ $item.Date | time.Format (site.Params.publications.date_format | default "January, 2006") }}
+    </span>
+    {{ end }}
+
+    {{ if or $item.Params.publication_short $item.Params.publication }}
+    <span class="middot-divider"></span>
+    <span class="pub-publication">
+      {{ if $item.Params.publication_short }}
+        {{ $item.Params.publication_short | markdownify }}
+      {{ else if $item.Params.publication }}
+        {{ $item.Params.publication | markdownify }}
+      {{ end }}
+    </span>
+    {{ end }}
+  </div>
+
+  <div class="section-subheading article-title mb-1 mt-3">
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+  </div>
+
+</div>

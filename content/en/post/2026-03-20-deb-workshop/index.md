@@ -2,8 +2,6 @@
 title: "Workshop on Dynamic Energy Budget (DEB) Theory"
 date: 2026-03-19
 summary: "This workshop aims to provide a systematic introduction to the core principles and applications of Dynamic Energy Budget (DEB) theory."
-categories:
-  - Events
 draft: false
 ---
 

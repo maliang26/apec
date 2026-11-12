@@ -88,8 +88,27 @@ publicationsBlock:
 #      publication_type: 'article-journal'
       publication_type: 
   design:
-    view: card
+    view: publication_home
     columns: '1'      
+
+peopleBlock:
+  block: people
+  content:
+    title: People
+    user_groups:
+      - Group Leader
+      - Postdoctoral Research Associate
+      - Lab Administrator
+      - PhD Student
+      - Master Student
+      - Undergraduate Student
+      - Alumni
+    sort_by: Params.last_name
+    sort_ascending: true
+  design:
+    show_interests: false
+    show_role: true
+    show_social: true
 
 teamsBlock:
   block: markdown

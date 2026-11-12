@@ -138,11 +138,12 @@ https://blog.csdn.net/chenmo2001/article/details/117674446
 </section>
 
 
-{{ $team_args := dict "wcPage" $ "wcBlock" .Params.teamsBlock "wcIdentifier" "meet_the_team" }}
-<section id="section-meet-team" class="home-section wg-team">
+{{ $peopleBlock := .Params.peopleBlock }}
+{{ if $peopleBlock }}
+{{ $people_args := dict "wcPage" $ "wcBlock" $peopleBlock "wcIdentifier" "people" }}
+<section id="section-people" class="home-section wg-people">
   <div class="container">
-    <div class="row">
-          {{ partial "blocks/markdown.html" $team_args }}
-    </div>
+    {{ partial "blocks/people.html" $people_args }}
   </div>
 </section>
+{{ end }}
